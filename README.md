@@ -24,13 +24,13 @@
 | ---------------- | ---------- | ----------------------------- |
 | item_name        | string     | null: false                   |
 | price            | integer    | null: false                   |
-| user             | references | null: false foreign_kye: true |
+| user_id          | references | null: false foreign_kye: true |
 | category_id      | integer    | null: false                   |
 | condition_id     | integer    | null: false                   |
 | shipping_cost_id | integer    | null: false                   |
 | shipping_day_id  | integer    | null: false                   |
 | descriprion      | text       | null: false                   |
-| prefectures_id   | integer    | null: false                   |
+| prefecture_id    | integer    | null: false                   |
 
 ### Association
 
@@ -39,10 +39,10 @@
 
 ## ordersテーブル
 
-| Column | Type       | Options                       |
-| ------ | ---------- | ----------------------------- |
-| user   | references | null: false foreign_kye: true |
-| item   | references | null: false foreign_kye: true |
+| Column  | Type       | Options                       |
+| ------- | ---------- | ----------------------------- |
+| user_id | references | null: false foreign_kye: true |
+| item_id | references | null: false foreign_kye: true |
 
 ### Association
 
@@ -54,12 +54,15 @@
 
 | Column         | Type       | Options                       |
 | -------------- | ---------- | ----------------------------- |
+| card_number    | string     | null: false                   |
+| expiration     | string     | null: false                   |
+| security_code  | string     | null: false                   |
 | post_code      | string     | null: false                   |
 | prefecture_id  | integer    | null: false                   |
 | street_address | string     | null: false                   |
 | municioaliry   | string     | null: false                   |
 | phone_number   | string     | null: false                   |
-| order_item     | references | null: false foreign_kye: true |
+| order_item_id  | references | null: false foreign_kye: true |
 
 ### Association
 
