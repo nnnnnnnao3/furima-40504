@@ -24,7 +24,7 @@
 | ---------------- | ---------- | ----------------------------- |
 | item_name        | string     | null: false                   |
 | price            | integer    | null: false                   |
-| user          | references | null: false foreign_kye: true |
+| user             | references | null: false foreign_key: true |
 | category_id      | integer    | null: false                   |
 | condition_id     | integer    | null: false                   |
 | shipping_cost_id | integer    | null: false                   |
@@ -39,10 +39,10 @@
 
 ## ordersテーブル
 
-| Column  | Type       | Options                       |
-| ------- | ---------- | ----------------------------- |
-| user| references | null: false foreign_kye: true |
-| item| references | null: false foreign_kye: true |
+| Column | Type       | Options                       |
+| ------ | ---------- | ----------------------------- |
+| user   | references | null: false foreign_key: true |
+| item   | references | null: false foreign_key: true |
 
 ### Association
 
@@ -60,7 +60,7 @@
 | street_address | string     | null: false                   |
 | phone_number   | string     | null: false                   |
 | building_name  | string     |                               |
-| order  | references | null: false foreign_kye: true |
+| order          | references | null: false foreign_key: true |
 
 ### Association
 
