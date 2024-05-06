@@ -8,7 +8,8 @@ class Item < ApplicationRecord
   has_one_attached :image
 
   # 空の投稿を保存できないようにする
-  validates :item_name, :price, :description, :image, presence: true
+  validates :item_name, :price, :description, :image{ greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }
+  validates :price, numericality: true
 
   # ジャンルの選択が「---」の時は保存できないようにする
   validates :category_id, :condition_id, :shipping_cost_id, :prefecture_id, :shipping_day_id, numericality: { other_than: 1, message: "can't be blank" }
