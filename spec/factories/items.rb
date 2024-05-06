@@ -1,5 +1,7 @@
 FactoryBot.define do
+
   factory :item do
+    association :user
     item_name                 { Faker::Commerce.product_name }
     description               { Faker::Lorem.paragraph(sentence_count: 3)}
     category_id               { rand(2..10) }
