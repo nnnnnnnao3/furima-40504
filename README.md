@@ -56,7 +56,7 @@
 | -------------- | ---------- | ------------------------------ |
 | post_code      | string     | null: false                    |
 | prefecture_id  | integer    | null: false                    |
-| municioaliry   | string     | null: false                    |
+| municipality   | string     | null: false                    |
 | street_address | string     | null: false                    |
 | phone_number   | string     | null: false                    |
 | building_name  | string     |                                |
