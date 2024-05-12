@@ -38,7 +38,7 @@ RSpec.describe OrderAddress, type: :model do
         expect(@order_address.errors.full_messages).to include "Prefecture can't be blank"
       end
 
-      it 'municipalityが空では登録できない' do
+      it 'street_addressが空では登録できない' do
         @order_address.municipality = ''
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include "Municipality can't be blank"
@@ -67,6 +67,13 @@ RSpec.describe OrderAddress, type: :model do
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include 'Phone number is too short'
       end
+
+
+      it 'phone_numberが12文字以上では登録できない' do
+        @order_address.phone_number = '1234567891234'
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include 'Phone number is too long'
+      end 
 
       it 'ユーザーが紐付いていなければ投稿できない' do
         @order_address.user_id = nil
