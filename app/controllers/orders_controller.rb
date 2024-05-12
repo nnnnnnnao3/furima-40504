@@ -1,4 +1,8 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!, only: [:index]
+  before_action :check_item_sold, only: [:index]
+  before_action :move_to_index, only: [:index]
+
   def index
     gon.public_key = ENV['PAYJP_PUBLIC_KEY']
     @item = Item.find(params[:item_id])
@@ -32,6 +36,17 @@ class OrdersController < ApplicationController
       amount: @item.price, # 商品の値段
       card: order_params[:token],    # カードトークン
       currency: 'jpy'                # 通貨の種類（日本円）
-  )
+    )
 end
+
+  def check_item_sold
+    @item = Item.find(params[:item_id])
+    if @item.order
+      redirect_to root_path
+    end
+  end
+
+  def move_to_index
+    redirect_to root_path if current_user == @item.user
+  end
 end
