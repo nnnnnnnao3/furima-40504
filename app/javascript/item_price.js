@@ -1,4 +1,4 @@
-window.addEventListener('turbo:load', () => {
+const price = () => {
   // 金額を入力した数値をpriceInputという変数に格納
   const priceInput = document.getElementById("item-price");
   // 入力するたびイベント発火
@@ -19,4 +19,6 @@ window.addEventListener('turbo:load', () => {
    // コンマ区切りで表示
   SalesProfit.innerHTML = profitValue.toLocaleString();
   })
-});
+};
+window.addEventListener('turbo:load', price);
+window.addEventListener("turbo:render", price);
