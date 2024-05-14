@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :nickname, presence: true
   validates :birthday, presence: true
   # 英字と数字の両方が含まれていることを許可する
-  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'Include both letters and numbers' }
+  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: :password_complexity }
 
   with_options presence: true do
     # ひらがな、カタカナ、漢字のみ許可する

@@ -1,0 +1,30 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        last_name: 苗字
+        first_name: 名前
+        kana_last_name: カナ姓
+        kana_first_name: カナ名
+        birthday: 誕生日
+        password: パスワード 
+    errors:
+      models:
+        user:
+          attributes:
+          last_name:
+            invalid: "は無効です。全角文字を入力してください。"
+          first_name:
+            invalid: "は無効です。全角文字を入力してください。"
+          kana_last_name:
+            invalid: "は無効です。全角カタカナを入力してください。"
+          kana_first_name:
+            invalid: "は無効です。全角カタカナを入力してください。"
+           messages:
+            password_complexity: "は英字と数字両方を含む設定が必要です。"  
+
+
+      item:
+        text: テキスト
+        image: 画像
