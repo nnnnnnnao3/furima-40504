@@ -11,7 +11,6 @@ ja:
         shipping_cost_id: 配送料
         prefecture_id: 配送元の地域
         shipping_day_id: 配送までの日数
-
       user:
         nickname: ニックネーム
         last_name: 苗字
@@ -20,6 +19,15 @@ ja:
         kana_first_name: カナ名
         birthday: 誕生日
         password: パスワード 
+  activemodel:
+    attributes:
+      order_address:
+        municipality: 市町村
+        phone_number: 電話番号
+        street_address: 番地
+        post_code: 郵便番号
+        prefecture_id: 配送元の地域
+        token: クレジットカード情報
     errors:
       models:
         user:
@@ -46,5 +54,13 @@ ja:
               other_than: "を選択してください。"
             shipping_day_id:
               other_than: "を選択してください。"
-
- 
+        order_address:
+          attributes:
+            phone_number:
+              invalid: "は不正な値です。数字のみを入力してください。"
+              too_short: "は短すぎます"
+              too_long: "は長すぎます"
+            prefecture_id:
+              other_than: "を選択してください。" 
+            post_code:
+              invalid: "は無効です。次のように入力してください（例 123-4567）"
