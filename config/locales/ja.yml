@@ -1,6 +1,17 @@
 ja:
   activerecord:
     attributes:
+      item:
+        item_name: 商品名
+        price: 金額
+        description: 説明
+        image: 画像
+        category_id: カテゴリー
+        condition_id: 状態
+        shipping_cost_id: 配送料
+        prefecture_id: 配送元の地域
+        shipping_day_id: 配送までの日数
+
       user:
         nickname: ニックネーム
         last_name: 苗字
@@ -13,18 +24,27 @@ ja:
       models:
         user:
           attributes:
-          last_name:
-            invalid: "は無効です。全角文字を入力してください。"
-          first_name:
-            invalid: "は無効です。全角文字を入力してください。"
-          kana_last_name:
-            invalid: "は無効です。全角カタカナを入力してください。"
-          kana_first_name:
-            invalid: "は無効です。全角カタカナを入力してください。"
-           messages:
-            password_complexity: "は英字と数字両方を含む設定が必要です。"  
+            last_name:
+              invalid: "は無効です。全角文字を入力してください。"
+            first_name:
+              invalid: "は無効です。全角文字を入力してください。"
+            kana_last_name:
+              invalid: "は無効です。全角カタカナを入力してください。"
+            kana_first_name:
+              invalid: "は無効です。全角カタカナを入力してください。"
+            password:                 
+              password_complexity: "は英字と数字両方を含む設定が必要です。"  
+        item:
+          attributes:
+            category_id:
+              other_than: "を選択してください。"
+            condition_id:
+              other_than: "を選択してください。"
+            shipping_cost_id:
+              other_than: "を選択してください。"
+            prefecture_id:
+              other_than: "を選択してください。"
+            shipping_day_id:
+              other_than: "を選択してください。"
 
-
-      item:
-        text: テキスト
-        image: 画像
+ 
