@@ -19,15 +19,6 @@ ja:
         kana_first_name: カナ名
         birthday: 誕生日
         password: パスワード 
-  activemodel:
-    attributes:
-      order_address:
-        municipality: 市町村
-        phone_number: 電話番号
-        street_address: 番地
-        post_code: 郵便番号
-        prefecture_id: 配送元の地域
-        token: クレジットカード情報
     errors:
       models:
         user:
@@ -54,6 +45,17 @@ ja:
               other_than: "を選択してください。"
             shipping_day_id:
               other_than: "を選択してください。"
+  activemodel:
+    attributes:
+      order_address:
+        municipality: 市町村
+        phone_number: 電話番号
+        street_address: 番地
+        post_code: 郵便番号
+        prefecture_id: 配送元の地域
+        token: クレジットカード情報
+    errors:
+      models:
         order_address:
           attributes:
             phone_number:
