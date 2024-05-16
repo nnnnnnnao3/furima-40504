@@ -73,11 +73,32 @@
 /* /共通 */
 
 /* 商品画像 */
+#previews {
+  display: flex;
+  object-fit: contain; 
+  flex-wrap: wrap;
+}
+
+.preview{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.preview-image{
+  margin-right: 10px;
+  object-fit: contain; 
+  height: 100px;
+  justify-content: center;
+
+}
+
 .img-upload {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 2vh 0;
+  margin: 0 10px;
 }
 
 .click-upload {
@@ -93,8 +114,9 @@
   text-align: center;
   border: solid 1px;
   cursor: pointer;
-  margin-bottom: 5px;
-  background-color: oldlace;
+  margin: 5px 10px;
+  width: 80px;
+  opacity: 0.5;
 }
 
 

@@ -214,7 +214,8 @@
   width: 200px;  
   height: 200px; 
   object-fit: cover;
-  margin: 0 10px;
+  margin:10px;
+  flex-wrap: wrap;
 }
 
 
@@ -222,5 +223,13 @@
   height: 200px;
   width: 200px;
   object-fit: cover;
-  margin: 0 10px;
+  margin:10px;
+  flex-wrap: wrap;
+}
+.other-images{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 70vw;
+  padding: 10vh ;
 }
