@@ -19,7 +19,8 @@
     // 表示する画像を生成
     const previewImage= document.createElement('img');
     previewImage.setAttribute('class', 'preview-image');
-    previewImage.setAttribute('src', blob);
+    // blobが存在しない場合にデフォルト画像を表示
+    previewImage.setAttribute('src', blob || 'path/to/your/default_image.png');
 
     // 削除ボタンを生成
     const deleteButton = document.createElement("div");
@@ -75,13 +76,9 @@
 
     const file = e.target.files[0];
 
-    // fileが空 = 何も選択しなかったのでプレビュー等を削除して終了する
-    if (!file) {
-      deleteImage(dataIndex);
-      return null;
-    };
-
-    const blob = window.URL.createObjectURL(file);
+ 
+    // fileが空 = 何も選択しなかったのでデフォルト画像を表示する
+    const blob = file ? window.URL.createObjectURL(file) : null;
 
     // data-indexを使用して、既にプレビューが表示されているかを確認する
     const alreadyPreview = document.querySelector(`.preview[data-index="${dataIndex}"]`);
