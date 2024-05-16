@@ -260,6 +260,11 @@ a {
   height: 33vh;
 }
 
+.preview-image {
+  width: 100px; 
+  height: auto;
+}
+
 .sold-out {
   position: absolute;
   top: 40%;
