@@ -208,6 +208,7 @@
 
 .other-images {
   display: flex;
+  justify-content: center;
  }
 
 .other-image img {
